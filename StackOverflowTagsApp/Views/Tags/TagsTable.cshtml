@@ -1,0 +1,40 @@
+﻿@model List<StackOverflowTagsApp.Models.TagModel>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TagsList</title>
+</head>
+<body>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nazwa tagu</th>
+            <th>Przypadki użycia</th>
+            <th>Udział</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @item.name
+            </td>
+            <td>
+                @item.count
+            </td>
+            <td>
+                @item.share
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>
